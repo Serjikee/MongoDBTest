@@ -13,6 +13,7 @@ public class TestGitBasies {
 
             Document filter = new Document();
             filter.append("first_name", true);
+            filter.append("last_name", true);
             filter.append("email", true);
             filter.append("_id", 0);
 
@@ -20,6 +21,7 @@ public class TestGitBasies {
             
             for (Document d: results) {
                 System.out.println(d.getString("first_name") + "\t" + "|" + "\t" +
+                        d.getString("last_name") + "\t" + "|" + "\t" +
                         d.getString("email"));
 
             }
