@@ -13,7 +13,7 @@ public class CreateNewBases {
 
     public static void create() {
         try (var mongoClient = MongoClients.create()) {
-            var database = mongoClient.getDatabase("test");
+            var database = mongoClient.getDatabase("MongoBasesUsers");
 
             database.listCollectionNames().forEach((Consumer<String>) System.out::println);
             database.listCollections().forEach((Consumer<Document>) System.out::println);
